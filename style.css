@@ -69,6 +69,11 @@ body {
         gap: 2rem
     }
     
+    .img-container .display-profile{
+        border-radius: 50%;
+        display: block;
+        margin:1rem auto;
+    }
 .header .profile-container{
     margin:2rem
 }
