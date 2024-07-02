@@ -20,10 +20,20 @@
         </div>
 
         <div class="profile-container">
-            <p class="display-name" data-testid="slackDisplayName">0H1D4</p>
-            <p class="display-email" data-testid="slackEmail">amosdaniel2005@gmail.com</p>
-            <p class="utcTime-container"><span class="utc-day" data-testid="currentDay"></span> <span class="utc-time"
-                    data-testid="currentTimeUTC"></span></p>
+            <p class="display-name" data-testid="slackDisplayName">
+                <span class="special_case">Name</span>
+                0H1D4
+            </p>
+            <p class="display-email" data-testid="slackEmail">
+                <span class="special_case">Email</span>
+                amosdaniel2005@gmail.com
+            </p>
+
+            <p class="utcTime-container">
+                <span class="special_case">Current Date</span>
+                <span class="utc-day" data-testid="currentDay"></span> <span class="utc-time"
+                    data-testid="currentTimeUTC"></span>
+            </p>
         </div>
     </header>
 
@@ -61,8 +71,6 @@
             const time = current_time.toLocaleDateString("en-US", { hour: "numeric", minute: "numeric", second: "numeric", timeZone: "UTC" });
             document.querySelector(".utc-time").textContent = `${time}`
             document.querySelector(".utc-day").textContent = `${DisplayCurrentDayInUTCFormat()}`
-
-
         }
         DisplayTimeInUTCFormat()
     </script>
