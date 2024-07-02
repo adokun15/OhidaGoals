@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
         My Tech Goal in the next Two Year
@@ -10,14 +11,18 @@
 </head>
 
 <body>
-    <nav>
-        <p>0H1D4</p>
-    </nav>
-    <header>
-        <h1>My Tech Goal in the next two Year</h1>
-        <img src="public\IMG_20230903_095112_124.jpg" alt="ohida" />
-        <p data-testid="OH1D4">0H1D4</p>
-        <p data-testid="amosdaniel2005@gmail.com">amosdaniel2005@gmail.com</p>
+
+    <h1 class="main-text">My Tech Goal in the next two Year</h1>
+    <header class="header">
+        <div class="img-container">
+            <img class="display-profile" src="public\IMG_20230903_095112_124.jpg" alt="ohida" />
+        </div>
+
+        <div class="profile-container">
+            <p class="display-name" data-testid="OH1D4">0H1D4</p>
+            <p class="display-email" data-testid="amosdaniel2005@gmail.com">amosdaniel2005@gmail.com</p>
+            <p class="utcTime"></p>
+        </div>
     </header>
 
     <main class="main-container">
@@ -33,9 +38,9 @@
         <article class="link-container card">
             <h2>Links</h2>
             <ul>
-                <li><a href="https://hng.tech/learn" data-testid="hngTask">Learn at HNG</a></li>
-                <li><a href="https://hng.tech/learn" data-testid="hngTask">Explore Keyword Dog</a></li>
-                <li><a href="https://hng.tech/learn" data-testid="hngTask">S</a></li>
+                <li><a href="https://hng.tech/learn" data-testid="hngLink">Learn at HNG</a></li>
+                <li><a href="https://keyword.dog" data-testid="keywordLink">Explore Keyword Dog</a></li>
+                <li><a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrape any WebSite</a></li>
             </ul>
         </article>
 
@@ -43,6 +48,24 @@
     <footer class>
         <p class="" data-testid="currentTimeUTC"></p>
     </footer>
+
+    <script>
+        const DisplayCurrentDayInUTCFormat = () => {
+            const current_day = new Date();
+            const time = current_day.toLocaleDateString("en-US", { weekday: "long" })
+            return time
+        }
+
+
+        const DisplayTimeInUTCFormat = () => {
+            const current_time = new Date();
+            const time = current_time.toLocaleDateString("en-US", { hour: "numeric", minute: "numeric", second: "numeric", timeZone: "UTC" });
+            document.querySelector(".utcTime").textContent = `${DisplayCurrentDayInUTCFormat()}, ${time}`
+
+
+        }
+        DisplayTimeInUTCFormat()
+    </script>
 </body>
 
 </html>

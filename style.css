@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: rgb(240, 242, 244);
+}
+
+.main-text {
+    text-align: center;
+    font-family: sans-serif;
+    margin: 2rem auto;
+}
+
+.header {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    gap: 2rem
+}
+
+.main-container {
+    margin: 2rem auto;
+    width: 40%;
+}
+
+.main-container .card {
+    margin: 3rem 0;
+    padding: 1rem 1.3rem;
+    border-radius: 1rem;
+    background-color: white;
+
+}
+
+.main-container .card h2 {
+    font-family: sans-serif;
+    margin-bottom: 2rem;
+}
+
+.main-container .card li {
+    list-style-type: none;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+.profile-container {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    font-weight: 700;
+}
+
+@media screen {}
