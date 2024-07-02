@@ -7,16 +7,11 @@
 body {
     position: relative;
     background-color: rgb(240, 242, 244);
-}
-
-.main-text {
-    text-align: center;
-    font-family: sans-serif;
-    margin: 2rem auto;
+    transition: all;
 }
 
 .header {
-    width: 40%;
+    width: 50%;
     margin: auto;
     display: flex;
     gap: 2rem
@@ -24,7 +19,13 @@ body {
 
 .main-container {
     margin: 2rem auto;
-    width: 40%;
+    width: 50%;
+}
+
+.main-text {
+    text-align: center;
+    font-family: sans-serif;
+    margin: 2rem auto;
 }
 
 .main-container .card {
@@ -52,4 +53,24 @@ body {
     font-weight: 700;
 }
 
-@media screen {}
+@media only screen and (max-width: 760px) {
+
+    .main-text {
+        text-align: center;
+        font-size: 1.8rem;
+        font-family: sans-serif;
+        margin: 2rem 3rem;
+    }
+
+    .header {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        gap: 2rem
+    }
+
+    .main-container {
+        margin: 2rem auto;
+        width: 95%;
+    }
+}
